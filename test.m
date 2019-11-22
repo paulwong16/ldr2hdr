@@ -1,0 +1,11 @@
+img = imread('./test1.jpg');
+f = @() FWI(img);
+t_FWI = timeit(f);
+f = @() histogram_hdr(img);
+t_HIS = timeit(f);
+f = @() SLH(img);
+t_SLH = timeit(f);
+f = @() lra_hdr(img);
+t_LRA = timeit(f);
+f = @() Ying_2017_CAIP(img);
+t_YING = timeit(f);
