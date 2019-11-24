@@ -6,7 +6,7 @@ img_histogram = imhist(img_v);
 
 %% w: weighted factor in Eq. (1)
 if  ~exist( 'w', 'var' )
-    w = 0.6;
+    w = 0.3;
 end
 
 %% WHS function
@@ -71,16 +71,12 @@ img1_ = double(uint8(255 * hsv2rgb(img1_)));
 %% LDR image fusion
 function [weight_O, weight_N, weight_U] = gaussian_shaped(O, N, U, p)
 
-    weight_O = 10/2 * exp(((255 - O + mean(mean(O))).^2) / (127.5^2) * 0.5);
-    weight_N = 10/5 * exp(((255 - N + mean(mean(N))).^2) / (127.5^2) * 0.5);
-    weight_U = 10/8 * exp(((255 - U + mean(mean(U))).^2) / (127.5^2) * 0.5);
+    weight_O = 10/p * exp(((O - 127.5).^2) / (127.5^2) * 0.5);
+    weight_N = 10/p * exp(((N - 127.5).^2) / (127.5^2) * 0.5);
+    weight_U = 10/p * exp(((U - 127.5).^2) / (127.5^2) * 0.5);
 end
 
-[w_o,w_n,w_u] = gaussian_shaped(img0_v, img_v, img1_v, 1);
-w_sum = w_o + w_n + w_u;
-w_o = w_o ./ w_sum;
-w_n = w_n ./ w_sum;
-w_u = w_u ./ w_sum;
+[w_o,w_n,w_u] = gaussian_shaped(img0_, double(img), img1_, 1);
 HDR = (w_o .* img0_ + w_n .* img + w_u .* img1_) ./ (w_o + w_n + w_u);
 HDR = uint8(HDR);
 end

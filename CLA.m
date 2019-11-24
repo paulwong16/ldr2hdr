@@ -210,6 +210,7 @@ F = fuse_sets(img_sets, W_k);
 [height_, width_] = size(gray);
 F = F(1:height_, 1:width_);
 res = color_reconstruction(img, F, gray);
+res = imbilatfilt(res);
 
 end
 

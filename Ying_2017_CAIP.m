@@ -53,6 +53,8 @@ J2 = J.*(1-W);
 
 fused = I2 + J2;
 
+fused = uint8(fused * 255);
+
     function J = maxEntropyEnhance(I, isBad)
         Y = rgb2gm(real(max(imresize(I, [50 50]), 0))); % max - avoid complex number 
         
