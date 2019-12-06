@@ -27,7 +27,7 @@ https://github.com/baidut/OpenCE/
 
 ## Example
 
-![alt text]https://github.com/paulwong16/ldr2hdr/blob/master/res.png "example")
+![alt text](https://github.com/paulwong16/ldr2hdr/blob/master/res.png "example")
 
 
 
