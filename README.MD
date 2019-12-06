@@ -7,6 +7,10 @@
 Fu, Xueyang, et al. "A fusion-based enhancing method for weakly illuminated images." Signal Processing 129 (2016): 82-96.
 https://xueyangfu.github.io/projects/sp2016.html
 
+- CLA.m
+
+Lee, Chang-Hsing, Ling-Hwei Chen, and Wei-Kang Wang. "Image contrast enhancement using classified virtual exposure image fusion." IEEE Transactions on Consumer Electronics 58.4 (2012): 1253-1261.
+
 - histogram_hdr.m
 
 Im, Jaehyun, et al. "Single image-based ghost-free high dynamic range imaging using local histogram stretching and spatially-adaptive denoising." IEEE Transactions on Consumer Electronics 57.4 (2011): 1478-1484.
