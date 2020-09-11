@@ -4,7 +4,7 @@ This repository contains the source code for ECE613 F19 Project.
 
 By [Yanting Miao](https://github.com/andrew-miao), [Zhijie Wang](https://github.com/paulwong16), [Kuanhan Shi](https://github.com/kuanhan), [Yuling Yu](https://github.com/YulingHu).
 
-Refer to [project report](https://github.com/paulwong16/TrafficMapForecasting/blob/master/Research_on_Single_Image_Fusion_based_High_Dynamic_Range_Enhancement.pdf) for details.
+Refer to [project report](https://github.com/paulwong16/ldr2hdr/blob/master/Research_on_Single_Image_Fusion_based_High_Dynamic_Range_Enhancement.pdf) for details.
 
 ## Comparison on fusion-based single image HDR enhancement
 
